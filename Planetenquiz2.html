@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<style>
+    body {
+        
+        font-family: Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+        background-image: url("Kunstvoller-Hintergrund.jpg");
+        background-size: cover;
+
+    }
+
+    .question {
+        margin-bottom: 20px;
+    }
+    .answers {
+        margin-left: 20px;
+    }
+    .answer {
+        margin-bottom: 5px;
+    }
+
+    .correct {
+        color: green;
+    }
+    .incorrect {
+        color: red;
+    }
+    #score {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+    .question {
+        margin-top: 20px;
+
+    }
+
+    #quiz{
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    input[type="radio"] {
+        margin-right: 5px;
+    }
+
+  #bonus-question{
+    padding-top: 60px;
+  }
+
+.correct-answer {
+    background-color: lightgreen;
+  }
+
+.incorrect-answer{
+    background-color: red;
+}
+
+#nerv-nicht {
+    padding-top: 20px;
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<div id="quiz">
+    <div class="question">
+        <p>Frage 1: Welcher ist der größste Planet unseres Sonnensystems?</p>
+        <div class="answers">
+            <div class="answer">
+                <input type="radio" name="q1" value="1"> Jupiter<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q1" value="2"> Mars<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q1" value="3"> Uranus<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q1" value="4"> Erde<br>
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>Frage 2: Welcher Planet ist der Sonne am nächsten</p>
+        <div class="answers">
+            <div class="answer">
+                <input type="radio" name="q2" value="3"> Venus<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q2" value="2"> Uranus<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q2" value="1"> Merkur<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q2" value="4"> Erde<br>
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>Frage 3: Was für einen Umfang hat der Erdäquator (ungefähr)?</p>
+        <div class="answers">
+            <div class="answer">
+                <input type="radio" name="q3" value="4"> 25.000km<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q3" value="2"> 47.000km<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q3" value="3"> 56.000km<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q3" value="1"> 40.000km<br>
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>Frage 4: Welcher Planet ist der kleinste unseres Sonnensystems?</p>
+        <div class="answers">
+            <div class="answer">
+                <input type="radio" name="q4" value="1"> Merkur <br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q4" value="5"> Pluto<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q4" value="3"> Erde<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q4" value="4"> Mars<br>
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>Frage 5: Was für eine Farbe hat der Mars?</p>
+        <div class="answers">
+            <div class="answer">
+                <input type="radio" name="q5" value="4"> hellblau<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q5" value="2"> grau<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q5" value="1"> rot<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q5" value="3"> dunkelblau<br>
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>Welcher Planet ist dafür bekannt auf seiner Sonnenumlaufbahn zu "rollen"</p>
+        <div class="answers">
+            <div class="answer">
+                <input type="radio" name="q6" value="4"> Saturn<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q6" value="2"> Neptun<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q6" value="3"> Venus<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q6" value="1"> Uranus<br>
+            </div>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>Frage 7: Wie lange braucht die Venus für eine Sonnenumrundung</p>
+        <div class="answers">
+            <div class="answer">
+                <input type="radio" name="q7" value="1"> 225 Erdentage<br><div id="venus-text"></div>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q7" value="2"> 226 Erdentage<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q7" value="3"> 220 Erdentage<br>
+            </div>
+            <div class="answer">
+                <input type="radio" name="q7" value="4"> 378 Erdentage<br>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Weitere Fragen hier einfügen -->
+
+    <button onclick="evaluateQuiz()">Auswerten</button>
+
+    <div id="score"></div>
+    <div id="super1"></div>
+
+
+
+
+<div id ="nerv-nicht">
+Bonus:
+<p>
+Ordne die Planeten unseres Sonnensystems nach der der Entfernung zur Sonne, beginne oben mit dem Sonnennächsten Objekt
+</p>
+
+
+
+
+<p>
+<input type="text" id="textfeld1" ><br>
+<input type="text" id="textfeld2" ><br>
+<input type="text" id="textfeld3" ><br>
+<input type="text" id="textfeld4" ><br>
+<input type="text" id="textfeld5" ><br>
+<input type="text" id="textfeld6" ><br>
+<input type="text" id="textfeld7" ><br>
+<input type="text" id="textfeld8" ><br>
+</p>
+<button onclick="speichernUndVergleichen()">Bonus Auswerten</button>
+
+<div id="bonusscoreratio"></div>
+<div id="super"></div>
+</div>
+
+</div>
+
+
+
+<script>
+alert("kurzer Hinweis: Bevor Sie mit dem Quiz starten sollten Sie diesen Hinweis beachten: Falls sie Antworten nach der Auswertung verändern möchten, bitten wir Sie vorher die Website neu zu laden.")
+
+    function evaluateQuiz() {
+        var score = 0;
+        var maxScore = 70; // Maximal mögliche Punktzahl
+
+        // Alle Fragen durchgehen
+        for (var i = 1; i <= 7; i++) {
+            var answer = document.querySelector('input[name="q' + i + '"]:checked');
+            if (answer && answer.value === "1") {
+                // Richtige Antwort ausgewählt
+                score += 10;
+                answer.parentElement.classList.add('correct');
+            } else if (answer) {
+                // Falsche Antwort ausgewählt
+                if (answer && answer.value == "5" ) {
+                    alert("Achtung: Pluto ist von den hier aufgeführten Himmelsobjekten zwar das kleinste, aber ihm wurde 2006 der Planetenstatus aberkannt!")
+                }
+                answer.parentElement.classList.add('incorrect');
+                document.querySelector('input[value="1"]').parentElement.classList.add('correct');
+            }
+            
+
+           
+        }
+        alert("Die Venus benötigt 225 Tage für einen Sonnenumlauf. Witzigerweise dauert eine Venusumdrehung um die eigene Achse 243 Tage. Das macht die Venus einzigartig")
+        
+        // Punktzahl anzeigen
+        var scoreRatio = score + '/' + maxScore;
+        document.getElementById('score').textContent = 'Erreichte Punktzahl: ' + scoreRatio;
+
+
+        if (score = 70) {
+            document.getElementById('super1').textContent = 'Super, alles richtig. Weiter so!'
+        }
+    }
+
+  
+
+
+
+
+
+    function speichernUndVergleichen() {
+
+            var bonusscore = 0;
+            var maxbonusscore = 120;
+
+
+        var textfeld1Inhalt = document.getElementById('textfeld1').value.toLowerCase();
+        var textfeld2Inhalt = document.getElementById('textfeld2').value.toLowerCase();
+        var textfeld3Inhalt = document.getElementById('textfeld3').value.toLowerCase();
+        var textfeld4Inhalt = document.getElementById('textfeld4').value.toLowerCase();
+        var textfeld5Inhalt = document.getElementById('textfeld5').value.toLowerCase();
+        var textfeld6Inhalt = document.getElementById('textfeld6').value.toLowerCase();
+        var textfeld7Inhalt = document.getElementById('textfeld7').value.toLowerCase();
+        var textfeld8Inhalt = document.getElementById('textfeld8').value.toLowerCase();
+
+        // Vergleiche jeden Wert mit einem anderen Wert
+    
+    
+        if (textfeld1Inhalt === "merkur") {
+         bonusscore += 15;
+         document.getElementById('textfeld1').classList.add('correct-answer');
+
+    } else {
+        document.getElementById('textfeld1').classList.add('incorrect-answer')
+    }
+
+   
+
+
+    if (textfeld2Inhalt === "venus") {
+        bonusscore +=15;
+        document.getElementById('textfeld2').classList.add('correct-answer');
+    } else {
+        
+        document.getElementById('textfeld2').classList.add('incorrect-answer');
+    }
+
+
+    if (textfeld3Inhalt === "erde") {
+        bonusscore += 15;
+        document.getElementById('textfeld3').classList.add('correct-answer');
+    } else {
+        document.getElementById('textfeld3').classList.add('incorrect-answer');
+    }
+
+    if (textfeld4Inhalt === "mars") {
+        bonusscore += 15;
+        document.getElementById('textfeld4').classList.add('correct-answer');
+    } else {
+        document.getElementById('textfeld4').classList.add('incorrect-answer');
+    }
+
+
+    if (textfeld5Inhalt === "jupiter") {
+        bonusscore += 15;
+        document.getElementById('textfeld5').classList.add('correct-answer');
+    } else {
+        document.getElementById('textfeld5').classList.add('incorrect-answer');
+    }
+
+
+    if (textfeld6Inhalt === "saturn") {
+        bonusscore += 15;
+        document.getElementById('textfeld6').classList.add('correct-answer');
+    } else {
+        document.getElementById('textfeld6').classList.add('incorrect-answer');
+    }
+   
+
+    if (textfeld7Inhalt === "uranus") {
+        bonusscore += 15;
+        document.getElementById('textfeld7').classList.add('correct-answer');
+    } else {
+        document.getElementById('textfeld7').classList.add('incorrect-answer');
+    }
+
+    if (textfeld8Inhalt === "neptun") {
+        bonusscore += 15;
+        document.getElementById('textfeld8').classList.add('correct-answer');
+    } else {
+        document.getElementById('textfeld8').classList.add('incorrect-answer');
+    }
+
+
+    var bonusscoreratio = bonusscore + '/' + maxbonusscore;
+    document.getElementById('bonusscoreratio').textContent = 'Erreichte Punktzahl:' + bonusscoreratio
+    
+    if (bonusscore === 120) {
+        document.getElementById('super').textContent = 'Super, alles richtig. Mach weiter so!'
+    } 
+
+    if (bonusscore <= 119) {
+        document.getElementById('super').textContent = 'Fast. Beim nächsten Versuch schaffst du alle.'
+    }
+ 
+    if (bonusscore <= 50) {
+        document.getElementById('super').textContent = 'Das kannst du besser, versuche es erneut.'
+    }
+  
+    }
+  
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
