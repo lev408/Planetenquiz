@@ -12,7 +12,7 @@
         align-items: center;
         justify-content: center;
         margin: 0px;
-        background-image: url("Kunstvoller-Hintergrund.jpg");
+        background-image: url("Textur-weich.jpg");
         background-size: cover;
 
     }
@@ -208,7 +208,7 @@
     <button onclick="evaluateQuiz()">Auswerten</button>
 
     <div id="score"></div>
-    <div id="super1"></div>
+    
 
 
 
@@ -243,7 +243,7 @@ Ordne die Planeten unseres Sonnensystems nach der der Entfernung zur Sonne, begi
 
 
 <script>
-alert("kurzer Hinweis: Bevor Sie mit dem Quiz starten sollten Sie diesen Hinweis beachten: Falls sie Antworten nach der Auswertung verändern möchten, bitten wir Sie vorher die Website neu zu laden.")
+
 
     function evaluateQuiz() {
         var score = 0;
@@ -275,8 +275,7 @@ alert("kurzer Hinweis: Bevor Sie mit dem Quiz starten sollten Sie diesen Hinweis
         document.getElementById('score').textContent = 'Erreichte Punktzahl: ' + scoreRatio;
 
 
-        if (score = 70) {
-            document.getElementById('super1').textContent = 'Super, alles richtig. Weiter so!'
+        
         }
     }
 
